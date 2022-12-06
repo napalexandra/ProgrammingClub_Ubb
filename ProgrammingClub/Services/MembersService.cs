@@ -42,7 +42,7 @@ namespace ProgrammingClub.Services
         public async Task UpdateMember(Member member)
         {
             _context.Update(member);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProgrammingClubDataContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddTransient<IMembersService, MembersService>();
+builder.Services.AddTransient<ICodeSnippetsService, CodeSnippetsService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
